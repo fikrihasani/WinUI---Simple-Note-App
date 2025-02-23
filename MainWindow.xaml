@@ -20,6 +20,12 @@
             <Button Grid.Column="1" x:Name="myButton" Click="myButton_Click">Click Me</Button>
         </Grid>
 
-        <TextBlock x:Name="displayText"></TextBlock>
+        <ListView x:Name="textList" HorizontalAlignment="Stretch"  IsItemClickEnabled="True" ItemClick="textList_ItemClick">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding title}" Margin="5"></TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackPanel>
 </Window>
